@@ -1,0 +1,24 @@
+:root{--a:#e8789f;--c:#fff;--t:#4a2a38;--bg:color-mix(in srgb,var(--a) 8%,#fff);--b:color-mix(in srgb,var(--a) 18%,var(--c));box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--c:#3a2430;--t:#fde8f0;--bg:#241520}}
+:root[data-theme=dark]{--c:#3a2430;--t:#fde8f0;--bg:#241520}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:Cairo,Tajawal,system-ui,sans-serif;background:var(--bg);color:var(--t);min-height:100vh;font-size:18px;line-height:1.7}
+#app{max-width:560px;margin:auto;padding:16px}
+.card{background:var(--c);border-radius:22px;padding:20px;box-shadow:0 6px 24px #0002;margin:12px 0;animation:in .4s}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+button{font:inherit;border:0;border-radius:16px;padding:10px 16px;margin:4px;background:var(--b);color:var(--t);cursor:pointer;transition:transform .15s}
+button:active{transform:scale(.94)}
+.p{background:var(--a);color:#fff;box-shadow:0 0 14px var(--a)}
+.o{display:block;width:100%;text-align:right}.o.s{background:var(--a);color:#fff;animation:bn .3s}
+@keyframes bn{50%{transform:scale(1.04)}}
+.bar{height:10px;background:var(--b);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--a);transition:width .4s}
+.top{display:flex;justify-content:space-between;align-items:center}
+h1{font-size:2.4em;margin:.2em 0;text-align:center}.c{text-align:center}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.g button{font-size:2em}
+.fl{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.fl span{position:absolute;bottom:-40px;animation:up linear infinite;opacity:.5}
+@keyframes up{to{transform:translateY(-110vh)}}
+.bst{position:fixed;font-size:26px;pointer-events:none;animation:up 1.6s ease-out forwards}
+#w{transition:transform 3s cubic-bezier(.2,.8,.2,1);font-size:3em;display:inline-block}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+pre{white-space:pre-wrap;font-family:inherit;font-size:.85em}
